@@ -1,0 +1,51 @@
+package PTLib_VCL_VirtualTrees_R;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  xmlrtl,
+  soaprtl,
+  dbrtl,
+  inet,
+  PTLib_Common_R,
+  RESTComponents,
+  VirtualTreesDR,
+  PTLib_VCL_R,
+  vclwinx;
+
+contains
+  PTLib.VCL.VirtualTrees in '..\..\Lib\PTLib.VCL.VirtualTrees.pas',
+  PTLib.VCL.VirtualTrees.Log in '..\..\Lib\PTLib.VCL.VirtualTrees.Log.pas',
+  PTLib.VCL.VirtualTrees.TextHighlightTree in '..\..\Lib\PTLib.VCL.VirtualTrees.TextHighlightTree.pas',
+  PTLib.VCL.VirtualTrees.Frames.SearchLog in '..\..\Lib\PTLib.VCL.VirtualTrees.Frames.SearchLog.pas',
+  PTLib.VCL.VirtualTrees.Frames.Logs in '..\..\Lib\PTLib.VCL.VirtualTrees.Frames.Logs.pas';
+
+end.

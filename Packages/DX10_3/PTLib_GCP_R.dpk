@@ -1,0 +1,59 @@
+package PTLib_GCP_R;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'GCP Runtime'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  xmlrtl,
+  soaprtl,
+  dbrtl,
+  inet,
+  IndySystem,
+  IndyProtocols,
+  IndyCore,
+  RESTComponents,
+  PTLib_Common_R,
+  RemObjects_Grijjy_D26;
+
+contains
+  PTLib.GCP.Authentication in '..\..\Lib\PTLib.GCP.Authentication.pas',
+  PTLib.GCP.Classes in '..\..\Lib\PTLib.GCP.Classes.pas',
+  PTLib.GCP.Factory in '..\..\Lib\PTLib.GCP.Factory.pas',
+  PTLib.GCP.Interfaces in '..\..\Lib\PTLib.GCP.Interfaces.pas',
+  PTLib.GCP.Logger in '..\..\Lib\PTLib.GCP.Logger.pas',
+  PTLib.GCP.Network in '..\..\Lib\PTLib.GCP.Network.pas',
+  PTLib.GCP in '..\..\Lib\PTLib.GCP.pas',
+  PTLib.GCP.Service.PubSub in '..\..\Lib\PTLib.GCP.Service.PubSub.pas',
+  PTLib.GCP.Service in '..\..\Lib\PTLib.GCP.Service.pas',
+  PTLib.GCP.Service.Speech in '..\..\Lib\PTLib.GCP.Service.Speech.pas',
+  PTLib.GCP.Types in '..\..\Lib\PTLib.GCP.Types.pas',
+  PTLib.GCP.Service.Stackdriver.Logging in '..\..\Lib\PTLib.GCP.Service.Stackdriver.Logging.pas';
+
+end.

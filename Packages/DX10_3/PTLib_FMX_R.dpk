@@ -1,0 +1,49 @@
+package PTLib_FMX_R;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'PTLib FMX'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  xmlrtl,
+  fmx,
+  soaprtl,
+  dbrtl,
+  inet,
+  RESTComponents,
+  PTLib_Common_R;
+
+contains
+  PTLib.FMX.Graphics in '..\..\Lib\PTLib.FMX.Graphics.pas',
+  PTLib.FMX.LogViewer in '..\..\Lib\PTLib.FMX.LogViewer.pas',
+  PTLib.FMX.MediaPlayer.Helpers in '..\..\Lib\PTLib.FMX.MediaPlayer.Helpers.pas',
+  PTLib.FMX.MediaPlayer.Helpers.Win in '..\..\Lib\PTLib.FMX.MediaPlayer.Helpers.Win.pas',
+  PTLib.FMX.InformationGrid in '..\..\Lib\PTLib.FMX.InformationGrid.pas';
+
+end.

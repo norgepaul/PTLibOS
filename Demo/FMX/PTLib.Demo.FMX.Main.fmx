@@ -1,0 +1,367 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'PTLib Demo'
+  ClientHeight = 775
+  ClientWidth = 1305
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Size.Width = 1299.000000000000000000
+    Size.Height = 575.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      1299s
+      549s)
+    object tabSmartCard: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 80.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Smart Card'
+      ExplicitSize.cx = 80.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Layout1: TLayout
+        Align = Top
+        Margins.Left = 3.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 3.000000000000000000
+        Position.X = 3.000000000000000000
+        Position.Y = 3.000000000000000000
+        Size.Width = 1293.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object btnSmartCardEnable: TButton
+          Action = actSmartCardEnable
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Size.Width = 80.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object btnSmartCardDisable: TButton
+          Action = actSmartCardDisable
+          Align = Left
+          Enabled = False
+          ImageIndex = -1
+          Margins.Left = 3.000000000000000000
+          Position.X = 83.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+        object cbSmartCardType: TComboBox
+          Align = Left
+          Items.Strings = (
+            'PCSC USB'
+            'Springcard Serial'
+            'GemProx Serial')
+          ItemIndex = 0
+          Margins.Left = 5.000000000000000000
+          Position.X = 168.000000000000000000
+          Size.Width = 233.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          OnChange = cbSmartCardTypeChange
+        end
+        object edtSmartCardCOMPort: TComboEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 3
+          ItemHeight = 19.000000000000000000
+          ItemIndex = -1
+          Position.X = 411.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Size.Width = 166.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object chkReverseUID: TCheckBox
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Position.X = 582.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Reverse UID'
+          OnChange = chkReverseUIDChange
+        end
+      end
+      object laySmartCard: TLayout
+        Align = Client
+        Size.Width = 1299.000000000000000000
+        Size.Height = 519.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Layout2: TLayout
+          Align = Left
+          Margins.Left = 3.000000000000000000
+          Margins.Top = 3.000000000000000000
+          Margins.Bottom = 3.000000000000000000
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 526.000000000000000000
+          Size.Height = 513.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Layout8: TLayout
+            Align = Top
+            Margins.Bottom = 3.000000000000000000
+            Size.Width = 526.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label9: TLabel
+              Align = Left
+              Margins.Right = 5.000000000000000000
+              Size.Width = 129.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.HorzAlign = Trailing
+              Text = 'UID:'
+              TabOrder = 1
+            end
+            object lblSmartCardUID: TLabel
+              Align = Client
+              Size.Width = 392.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object layPCSCSmartCard: TLayout
+            Align = Client
+            Size.Width = 526.000000000000000000
+            Size.Height = 486.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Layout4: TLayout
+              Align = Top
+              Margins.Bottom = 3.000000000000000000
+              Size.Width = 526.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              object Label1: TLabel
+                Align = Left
+                Margins.Right = 5.000000000000000000
+                Size.Width = 129.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.HorzAlign = Trailing
+                Text = 'Status:'
+                TabOrder = 1
+              end
+              object lblSmartCardStatus: TLabel
+                Align = Client
+                Size.Width = 392.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+            object Layout5: TLayout
+              Align = Client
+              Margins.Bottom = 3.000000000000000000
+              Size.Width = 526.000000000000000000
+              Size.Height = 402.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object lblSmartCardATR: TLabel
+                Align = Client
+                Size.Width = 392.000000000000000000
+                Size.Height = 402.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.VertAlign = Leading
+                TabOrder = 0
+              end
+              object Label3: TLabel
+                Align = Left
+                Margins.Right = 5.000000000000000000
+                Size.Width = 129.000000000000000000
+                Size.Height = 402.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.HorzAlign = Trailing
+                TextSettings.VertAlign = Leading
+                Text = 'ATR:'
+                TabOrder = 1
+              end
+            end
+            object Layout6: TLayout
+              Align = Top
+              Margins.Bottom = 3.000000000000000000
+              Position.Y = 54.000000000000000000
+              Size.Width = 526.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object Label5: TLabel
+                Align = Left
+                Margins.Right = 5.000000000000000000
+                Size.Width = 129.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.HorzAlign = Trailing
+                Text = 'Protocol:'
+                TabOrder = 1
+              end
+              object lblSmartCardProtocol: TLabel
+                Align = Client
+                Size.Width = 392.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+            object Layout7: TLayout
+              Align = Top
+              Margins.Bottom = 3.000000000000000000
+              Position.Y = 27.000000000000000000
+              Size.Width = 526.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object Label7: TLabel
+                Align = Left
+                Margins.Right = 5.000000000000000000
+                Size.Width = 129.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.HorzAlign = Trailing
+                Text = 'Card Type:'
+                TabOrder = 1
+              end
+              object lblSmartCardType: TLabel
+                Align = Client
+                Size.Width = 392.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+        end
+        object Layout3: TLayout
+          Align = Client
+          Margins.Left = 3.000000000000000000
+          Margins.Top = 3.000000000000000000
+          Margins.Right = 3.000000000000000000
+          Margins.Bottom = 3.000000000000000000
+          Size.Width = 764.000000000000000000
+          Size.Height = 513.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object memSmartCardErrors: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Align = Client
+            Size.Width = 764.000000000000000000
+            Size.Height = 189.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 760.000000000000000000
+            Viewport.Height = 185.000000000000000000
+          end
+          object memSmartCardInfo: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Align = Top
+            Margins.Bottom = 3.000000000000000000
+            Size.Width = 764.000000000000000000
+            Size.Height = 321.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Viewport.Width = 760.000000000000000000
+            Viewport.Height = 317.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object Layout9: TLayout
+    Align = Bottom
+    Margins.Left = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 584.000000000000000000
+    Size.Width = 1299.000000000000000000
+    Size.Height = 188.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object memLog: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      StyledSettings = [Style, FontColor]
+      TextSettings.Font.Family = 'Consolas'
+      Align = Client
+      Size.Width = 1299.000000000000000000
+      Size.Height = 188.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 1295.000000000000000000
+      Viewport.Height = 184.000000000000000000
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Bottom
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 578.000000000000000000
+    Size.Width = 1305.000000000000000000
+    Size.Height = 6.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object tmrUpdate: TTimer
+    Interval = 100
+    OnTimer = tmrUpdateTimer
+    Left = 1135
+    Top = 150
+  end
+  object ActionList1: TActionList
+    OnUpdate = ActionList1Update
+    Left = 1046
+    Top = 150
+    object actSmartCardEnable: TAction
+      Category = 'SmartCard'
+      Text = 'Start'
+      OnExecute = actSmartCardEnableExecute
+    end
+    object actSmartCardDisable: TAction
+      Category = 'SmartCard'
+      Text = 'Stop'
+      Enabled = False
+      OnExecute = actSmartCardDisableExecute
+    end
+  end
+  object PTLibLog1: TPTLibLog
+    OnLog = PTLibLog1Log
+    ProcessLogInterval = 50
+    Active = True
+    LogHistoryCount = 0
+    MaxLength = 2000
+    Left = 1215
+    Top = 150
+  end
+end

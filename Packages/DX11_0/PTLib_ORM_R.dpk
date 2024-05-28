@@ -1,0 +1,66 @@
+package PTLib_ORM_R;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'ORM Runtime'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  FireDACCommon,
+  FireDACCommonDriver,
+  FireDAC,
+  RESTComponents,
+  PTLib_Common_R,
+  FireDACPgDriver;
+
+contains
+  PTLib.ORM.SQL.Criteria in '..\..\Lib\PTLib.ORM.SQL.Criteria.pas',
+  PTLib.ORM.SQL.Engine.Firebird in '..\..\Lib\PTLib.ORM.SQL.Engine.Firebird.pas',
+  PTLib.ORM.SQL.Engine in '..\..\Lib\PTLib.ORM.SQL.Engine.pas',
+  PTLib.ORM.Types in '..\..\Lib\PTLib.ORM.Types.pas',
+  PTLib.ORM.Cache in '..\..\Lib\PTLib.ORM.Cache.pas',
+  PTLib.ORM.Classes in '..\..\Lib\PTLib.ORM.Classes.pas',
+  PTLib.ORM.SQL.Connection.FireDAC in '..\..\Lib\PTLib.ORM.SQL.Connection.FireDAC.pas',
+  PTLib.ORM.SQL.Connection in '..\..\Lib\PTLib.ORM.SQL.Connection.pas',
+  PTLib.ORM.Factory in '..\..\Lib\PTLib.ORM.Factory.pas',
+  PTLib.ORM.Interfaces in '..\..\Lib\PTLib.ORM.Interfaces.pas',
+  PTLib.ORM in '..\..\Lib\PTLib.ORM.pas',
+  PTLib.ORM.Serialization in '..\..\Lib\PTLib.ORM.Serialization.pas',
+  PTLib.ORM.Session in '..\..\Lib\PTLib.ORM.Session.pas',
+  PTLib.ORM.Serialization.Mapping in '..\..\Lib\PTLib.ORM.Serialization.Mapping.pas',
+  PTLib.ORM.SQL.Engine.MySQL in '..\..\Lib\PTLib.ORM.SQL.Engine.MySQL.pas',
+  PTLib.ORM.Attributes in '..\..\Lib\PTLib.ORM.Attributes.pas',
+  PTLib.ORM.Registry in '..\..\Lib\PTLib.ORM.Registry.pas',
+  PTLib.ORM.SQL.Engine.PostGres in '..\..\Lib\PTLib.ORM.SQL.Engine.PostGres.pas',
+  PTLib.ORM.KeyValueStore in '..\..\Lib\PTLib.ORM.KeyValueStore.pas',
+  PTLib.ORM.Connection in '..\..\Lib\PTLib.ORM.Connection.pas',
+  PTLib.ORM.Connection.FireDAC in '..\..\Lib\PTLib.ORM.Connection.FireDAC.pas',
+  PTLib.ORM.Connection.FireDAC.PostGres in '..\..\Lib\PTLib.ORM.Connection.FireDAC.PostGres.pas';
+
+end.

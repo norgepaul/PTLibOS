@@ -1,0 +1,52 @@
+package PTLib_MARS_R;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'PTLib Mars Library'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  bindengine,
+  bindcomp,
+  MARS.Utils,
+  MARSClient.Core,
+  PTLib_Common_R;
+
+contains
+  PTLib.MARS.ServerContainer in '..\..\Lib\PTLib.MARS.ServerContainer.pas',
+  PTLib.MARS.Client in '..\..\Lib\PTLib.MARS.Client.pas',
+  PTLib.MARS.Interfaces in '..\..\Lib\PTLib.MARS.Interfaces.pas',
+  PTLib.MARS.Types in '..\..\Lib\PTLib.MARS.Types.pas',
+  PTLib.MARS.ServerContainer.Application in '..\..\Lib\PTLib.MARS.ServerContainer.Application.pas',
+  PTLib.MARS.Classes in '..\..\Lib\PTLib.MARS.Classes.pas',
+  PTLib.MARS.HTTPRequestManager in '..\..\Lib\PTLib.MARS.HTTPRequestManager.pas',
+  PTLib.MARS.ReadersAndWriters.XSuperObject in '..\..\Lib\PTLib.MARS.ReadersAndWriters.XSuperObject.pas',
+  PTLib.MARS.ServerContainer.Application.K8S in '..\..\Lib\PTLib.MARS.ServerContainer.Application.K8S.pas';
+
+end.
+

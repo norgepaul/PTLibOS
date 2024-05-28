@@ -1,0 +1,131 @@
+package PTLib_Common_R;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'PTLib - Low level library'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  xmlrtl,
+  vcl,
+  dbrtl,
+  inet,
+  soaprtl,
+  FireDACCommon,
+  FireDACCommonDriver,
+  FireDACIBDriver,
+  IndySystem,
+  IndyProtocols,
+  IndyCore,
+  fmx,
+  RESTComponents;
+
+contains
+  PTLib.Common.Thread.Manager in '..\..\Lib\PTLib.Common.Thread.Manager.pas',
+  PTLib.Common.Types in '..\..\Lib\PTLib.Common.Types.pas',
+  PTLib.Common.Timers.Thread in '..\..\Lib\PTLib.Common.Timers.Thread.pas',
+  PTLib.Common.Thread in '..\..\Lib\PTLib.Common.Thread.pas',
+  PTLib.Common.Classes in '..\..\Lib\PTLib.Common.Classes.pas',
+  PTLib.Common.Crypto in '..\..\Lib\PTLib.Common.Crypto.pas',
+  PTLib.Common.Files in '..\..\Lib\PTLib.Common.Files.pas',
+  PTLib.Common.Interfaces in '..\..\Lib\PTLib.Common.Interfaces.pas',
+  PTLib.Common.Log.LocalFile in '..\..\Lib\PTLib.Common.Log.LocalFile.pas',
+  PTLib.Common.Log in '..\..\Lib\PTLib.Common.Log.pas',
+  PTLib.Common.Registry in '..\..\Lib\PTLib.Common.Registry.pas',
+  PTLib.Common.SOAP in '..\..\Lib\PTLib.Common.SOAP.pas',
+  PTLib.Common.Strings in '..\..\Lib\PTLib.Common.Strings.pas',
+  PTLib.Common.Statistics in '..\..\Lib\PTLib.Common.Statistics.pas',
+  PTLib.Common.Scheduler in '..\..\Lib\PTLib.Common.Scheduler.pas',
+  PTLib.Database.Services.BackupRestore.Firebird in '..\..\Lib\PTLib.Database.Services.BackupRestore.Firebird.pas',
+  PTLib.Database.Services in '..\..\Lib\PTLib.Database.Services.pas',
+  PTLib.Common.Configuration.XML in '..\..\Lib\PTLib.Common.Configuration.XML.pas',
+  PTLib.Common.Configuration in '..\..\Lib\PTLib.Common.Configuration.pas',
+  PTLib.Common.TypeInfo in '..\..\Lib\PTLib.Common.TypeInfo.pas',
+  PTLib.Common.Streams in '..\..\Lib\PTLib.Common.Streams.pas',
+  PTLib.Common.Dates in '..\..\Lib\PTLib.Common.Dates.pas',
+  PTLib.Common.Log.Transmitter in '..\..\Lib\PTLib.Common.Log.Transmitter.pas',
+  PTLib.Common.Log.Receiver in '..\..\Lib\PTLib.Common.Log.Receiver.pas',
+  PTLib.Common.TimedEvents in '..\..\Lib\PTLib.Common.TimedEvents.pas',
+  PTLib.Common.Network.SimpleHTTPClient in '..\..\Lib\PTLib.Common.Network.SimpleHTTPClient.pas',
+  PTLib.Common.Network.SimpleHTTPServer in '..\..\Lib\PTLib.Common.Network.SimpleHTTPServer.pas',
+  PTLib.Common.InformationList in '..\..\Lib\PTLib.Common.InformationList.pas',
+  PTLib.Common.StateMachine in '..\..\Lib\PTLib.Common.StateMachine.pas',
+  PTLib.Common.Network in '..\..\Lib\PTLib.Common.Network.pas',
+  PTLib.Common.OS in '..\..\Lib\PTLib.Common.OS.pas',
+  PTLib.Common.CommandLine.Parser in '..\..\Lib\PTLib.Common.CommandLine.Parser.pas',
+  PTLib.Common.Graphics in '..\..\Lib\PTLib.Common.Graphics.pas',
+  PTLib.Common.Utils in '..\..\Lib\PTLib.Common.Utils.pas',
+  PTLib.Common.OpenStreetMaps in '..\..\Lib\PTLib.Common.OpenStreetMaps.pas',
+  PTLib.Common.Maps in '..\..\Lib\PTLib.Common.Maps.pas',
+  PTLib.Common.Transformations in '..\..\Lib\PTLib.Common.Transformations.pas',
+  PTLib.Common.Network.Rest.Server in '..\..\Lib\PTLib.Common.Network.Rest.Server.pas',
+  PTLib.Common.FIFOQueue in '..\..\Lib\PTLib.Common.FIFOQueue.pas',
+  PTLib.Common.FIFOQueue.MessageList in '..\..\Lib\PTLib.Common.FIFOQueue.MessageList.pas',
+  PTLib.Common.Variants in '..\..\Lib\PTLib.Common.Variants.pas',
+  PTLib.Common.LockedTypes in '..\..\Lib\PTLib.Common.LockedTypes.pas',
+  PTLib.Common.Network.HttpFileDownload in '..\..\Lib\PTLib.Common.Network.HttpFileDownload.pas',
+  PTLib.Common.DataHistory in '..\..\Lib\PTLib.Common.DataHistory.pas',
+  PTLib.Common.Serialization.Classes in '..\..\Lib\PTLib.Common.Serialization.Classes.pas',
+  PTLib.Common.Serialization in '..\..\Lib\PTLib.Common.Serialization.pas',
+  PTLib.Common.Serialization.Mapping in '..\..\Lib\PTLib.Common.Serialization.Mapping.pas',
+  PTLib.Common.PriorityQueue in '..\..\Lib\PTLib.Common.PriorityQueue.pas',
+  PTLib.Common.Network.HTTPRequestManager in '..\..\Lib\PTLib.Common.Network.HTTPRequestManager.pas',
+  PTLib.Common.Network.Rest.Messages in '..\..\Lib\PTLib.Common.Network.Rest.Messages.pas',
+  PTLib.Common.Network.PriorityHTTPQueue in '..\..\Lib\PTLib.Common.Network.PriorityHTTPQueue.pas',
+  PTLib.Common.FileVersion in '..\..\Lib\PTLib.Common.FileVersion.pas',
+  PTLib.Common.Display in '..\..\Lib\PTLib.Common.Display.pas',
+  PTLib.Common.ProcessMetrics in '..\..\Lib\PTLib.Common.ProcessMetrics.pas',
+  PTLib.Common.MachineFingerprint in '..\..\Lib\PTLib.Common.MachineFingerprint.pas',
+  PTLib.Common.JSON in '..\..\Lib\PTLib.Common.JSON.pas',
+  PTLib.Common.Network.Email in '..\..\Lib\PTLib.Common.Network.Email.pas',
+  PTLib.Common.Console in '..\..\Lib\PTLib.Common.Console.pas',
+  PTLib.Common.Timers in '..\..\Lib\PTLib.Common.Timers.pas',
+  PTLib.Common.SerialPort in '..\..\Lib\PTLib.Common.SerialPort.pas',
+  PTLib.Common.DelphiIDE in '..\..\Lib\PTLib.Common.DelphiIDE.pas',
+  PTLib.Common.Buffers in '..\..\Lib\PTLib.Common.Buffers.pas',
+  PTLib.Common.SmartCard in '..\..\Lib\PTLib.Common.SmartCard.pas',
+  PTLib.Common.SmartCard.Pcsc.DLL in '..\..\Lib\PTLib.Common.SmartCard.Pcsc.DLL.pas',
+  PTLib.Common.SmartCard.Pcsc in '..\..\Lib\PTLib.Common.SmartCard.Pcsc.pas',
+  PTLib.Common.SmartCard.Pcsc.DLL.Types in '..\..\Lib\PTLib.Common.SmartCard.Pcsc.DLL.Types.pas',
+  PTLib.Common.SmartCard.Types in '..\..\Lib\PTLib.Common.SmartCard.Types.pas',
+  PTLib.Common.SmartCard.Serial in '..\..\Lib\PTLib.Common.SmartCard.Serial.pas',
+  PTLib.Common.SerialPort.Async in '..\..\Lib\PTLib.Common.SerialPort.Async.pas',
+  PTLib.Common.KeyValueStore.EnvironmentVariables in '..\..\Lib\PTLib.Common.KeyValueStore.EnvironmentVariables.pas',
+  PTLib.Common.KeyValueStore in '..\..\Lib\PTLib.Common.KeyValueStore.pas',
+  PTLib.Common.ServerContainer in '..\..\Lib\PTLib.Common.ServerContainer.pas',
+  PTLib.Common.Factory in '..\..\Lib\PTLib.Common.Factory.pas',
+  PTLib.Common.ServerContainer.Service in '..\..\Lib\PTLib.Common.ServerContainer.Service.pas',
+  PTLib.Common.Localisation in '..\..\Lib\PTLib.Common.Localisation.pas',
+  PTLib.Common.KeyValueStore.Memory in '..\..\Lib\PTLib.Common.KeyValueStore.Memory.pas',
+  PTLib.Common.SmartCard.FileData in '..\..\Lib\PTLib.Common.SmartCard.FileData.pas',
+  PTLib.Common.Pools in '..\..\Lib\PTLib.Common.Pools.pas',
+  PTLib.Common.Network.Types in '..\..\Lib\PTLib.Common.Network.Types.pas',
+  PTLib.Common.VersionCheck in '..\..\Lib\PTLib.Common.VersionCheck.pas';
+
+end.
+

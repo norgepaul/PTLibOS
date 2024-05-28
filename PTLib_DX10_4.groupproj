@@ -1,0 +1,204 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C7F61D0B-7CE1-47E8-835A-AC67F60C44C8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Demo\PTLibDemoVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\FMX\PTLibDemoFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_Common_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_ORM_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_GCP_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_Windows_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_VCL_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_VCL_VirtualTrees_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_FMX_R.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_Common_D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_ORM_D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_Windows_D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_VCL_VirtualTrees_D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_VCL_D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\DX10_4\PTLib_FMX_D.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PTLibDemoVCL">
+        <MSBuild Projects="Demo\PTLibDemoVCL.dproj"/>
+    </Target>
+    <Target Name="PTLibDemoVCL:Clean">
+        <MSBuild Projects="Demo\PTLibDemoVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLibDemoVCL:Make">
+        <MSBuild Projects="Demo\PTLibDemoVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLibDemoFMX">
+        <MSBuild Projects="Demo\FMX\PTLibDemoFMX.dproj"/>
+    </Target>
+    <Target Name="PTLibDemoFMX:Clean">
+        <MSBuild Projects="Demo\FMX\PTLibDemoFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLibDemoFMX:Make">
+        <MSBuild Projects="Demo\FMX\PTLibDemoFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_Common_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Common_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_Common_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Common_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_Common_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Common_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_ORM_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_ORM_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_ORM_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_ORM_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_ORM_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_ORM_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_GCP_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_GCP_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_GCP_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_GCP_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_GCP_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_GCP_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_Windows_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Windows_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_Windows_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Windows_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_Windows_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Windows_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_VCL_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_VCL_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_VCL_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_VCL_VirtualTrees_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_VirtualTrees_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_VCL_VirtualTrees_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_VirtualTrees_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_VCL_VirtualTrees_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_VirtualTrees_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_FMX_R">
+        <MSBuild Projects="Packages\DX10_4\PTLib_FMX_R.dproj"/>
+    </Target>
+    <Target Name="PTLib_FMX_R:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_FMX_R.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_FMX_R:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_FMX_R.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_Common_D">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Common_D.dproj"/>
+    </Target>
+    <Target Name="PTLib_Common_D:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Common_D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_Common_D:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Common_D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_ORM_D">
+        <MSBuild Projects="Packages\DX10_4\PTLib_ORM_D.dproj"/>
+    </Target>
+    <Target Name="PTLib_ORM_D:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_ORM_D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_ORM_D:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_ORM_D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_Windows_D">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Windows_D.dproj"/>
+    </Target>
+    <Target Name="PTLib_Windows_D:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Windows_D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_Windows_D:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_Windows_D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_VCL_VirtualTrees_D">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_VirtualTrees_D.dproj"/>
+    </Target>
+    <Target Name="PTLib_VCL_VirtualTrees_D:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_VirtualTrees_D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_VCL_VirtualTrees_D:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_VirtualTrees_D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_VCL_D">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_D.dproj"/>
+    </Target>
+    <Target Name="PTLib_VCL_D:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_VCL_D:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_VCL_D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTLib_FMX_D">
+        <MSBuild Projects="Packages\DX10_4\PTLib_FMX_D.dproj"/>
+    </Target>
+    <Target Name="PTLib_FMX_D:Clean">
+        <MSBuild Projects="Packages\DX10_4\PTLib_FMX_D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTLib_FMX_D:Make">
+        <MSBuild Projects="Packages\DX10_4\PTLib_FMX_D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PTLibDemoVCL;PTLibDemoFMX;PTLib_Common_R;PTLib_ORM_R;PTLib_GCP_R;PTLib_Windows_R;PTLib_VCL_R;PTLib_VCL_VirtualTrees_R;PTLib_FMX_R;PTLib_Common_D;PTLib_ORM_D;PTLib_Windows_D;PTLib_VCL_VirtualTrees_D;PTLib_VCL_D;PTLib_FMX_D"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PTLibDemoVCL:Clean;PTLibDemoFMX:Clean;PTLib_Common_R:Clean;PTLib_ORM_R:Clean;PTLib_GCP_R:Clean;PTLib_Windows_R:Clean;PTLib_VCL_R:Clean;PTLib_VCL_VirtualTrees_R:Clean;PTLib_FMX_R:Clean;PTLib_Common_D:Clean;PTLib_ORM_D:Clean;PTLib_Windows_D:Clean;PTLib_VCL_VirtualTrees_D:Clean;PTLib_VCL_D:Clean;PTLib_FMX_D:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PTLibDemoVCL:Make;PTLibDemoFMX:Make;PTLib_Common_R:Make;PTLib_ORM_R:Make;PTLib_GCP_R:Make;PTLib_Windows_R:Make;PTLib_VCL_R:Make;PTLib_VCL_VirtualTrees_R:Make;PTLib_FMX_R:Make;PTLib_Common_D:Make;PTLib_ORM_D:Make;PTLib_Windows_D:Make;PTLib_VCL_VirtualTrees_D:Make;PTLib_VCL_D:Make;PTLib_FMX_D:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

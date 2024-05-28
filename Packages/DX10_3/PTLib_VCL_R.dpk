@@ -1,0 +1,67 @@
+package PTLib_VCL_R;
+
+{$R *.res}
+{$R *.dres}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'PTLib View Components'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vclx,
+  PTLib_Common_R,
+  vclimg;
+
+contains
+  PTLib.VCL.ProportionalSplitter in '..\..\Lib\PTLib.VCL.ProportionalSplitter.pas',
+  PTLib.VCL.FileEdit in '..\..\Lib\PTLib.VCL.FileEdit.pas',
+  PTLib.VCL.HTMLLinkLabel.Parser in '..\..\Lib\PTLib.VCL.HTMLLinkLabel.Parser.pas',
+  PTLib.VCL.HTMLLinkLabel in '..\..\Lib\PTLib.VCL.HTMLLinkLabel.pas',
+  PTLib.VCL.HTMLLinkLabel.Renderer in '..\..\Lib\PTLib.VCL.HTMLLinkLabel.Renderer.pas',
+  PTLib.VCL.HTMLLinkLabel.TextHandler in '..\..\Lib\PTLib.VCL.HTMLLinkLabel.TextHandler.pas',
+  PTLib.VCL.HTMLLinkLabel.Tools in '..\..\Lib\PTLib.VCL.HTMLLinkLabel.Tools.pas',
+  PTLib.VCL.HTMLLinkLabel.Tree in '..\..\Lib\PTLib.VCL.HTMLLinkLabel.Tree.pas',
+  PTLib.VCL.AwesomeEdit in '..\..\Lib\PTLib.VCL.AwesomeEdit.pas',
+  PTLib.VCL.GDIPlus in '..\..\Lib\PTLib.VCL.GDIPlus.pas',
+  PTLib.VCL.SearchEdit in '..\..\Lib\PTLib.VCL.SearchEdit.pas',
+  PTLib.VCL.Graphics in '..\..\Lib\PTLib.VCL.Graphics.pas',
+  PTLib.VCL.AwesomeEdit.Types in '..\..\Lib\PTLib.VCL.AwesomeEdit.Types.pas',
+  PTLib.VCL.AwesomeEdit.Classes in '..\..\Lib\PTLib.VCL.AwesomeEdit.Classes.pas',
+  PTLib.VCL.AwesomeEdit.Interfaces in '..\..\Lib\PTLib.VCL.AwesomeEdit.Interfaces.pas',
+  PTLib.VCL.GDIPlus.Interfaces in '..\..\Lib\PTLib.VCL.GDIPlus.Interfaces.pas',
+  PTLib.VCL.Console in '..\..\Lib\PTLib.VCL.Console.pas',
+  PTLib.VCL.HourGlass in '..\..\Lib\PTLib.VCL.HourGlass.pas',
+  PTLib.VCL.Clipboard in '..\..\Lib\PTLib.VCL.Clipboard.pas',
+  PTLib.VCL.Utils in '..\..\Lib\PTLib.VCL.Utils.pas',
+  PTLib.VCL.ImageViewer in '..\..\Lib\PTLib.VCL.ImageViewer.pas',
+  PTLib.VCL.StretchImage in '..\..\Lib\PTLib.VCL.StretchImage.pas',
+  PTLib.VCL.PageControl in '..\..\Lib\PTLib.VCL.PageControl.pas',
+  PTLib.VCL.TaskProgressBar in '..\..\Lib\PTLib.VCL.TaskProgressBar.pas';
+
+end.
+
